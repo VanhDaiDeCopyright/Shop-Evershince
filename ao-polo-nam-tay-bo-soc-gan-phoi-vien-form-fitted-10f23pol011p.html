@@ -481,6 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             border: 1px solid;
                         }
                     </style>
+                    <div class="header-customer" data-block="headercustomer"><a class="action showcustomer" href="#"></a>
                         <div class="header-customer-content" data-role="dropdownDialog" data-mage-init="{&quot;dropdownDialog&quot;:{ &quot;appendTo&quot;:&quot;[data-block=headercustomer]&quot;, &quot;triggerTarget&quot;:&quot;.showcustomer&quot;, &quot;timeout&quot;: &quot;2000&quot;, &quot;closeOnMouseLeave&quot;: false, &quot;closeOnEscape&quot;: true, &quot;triggerClass&quot;:&quot;active&quot;, &quot;parentClass&quot;:&quot;active&quot;, &quot;buttons&quot;:[]}}">
                             <div class="register"><a class="action action-login action-open-login">Đăng nhập</a> <span class="action action-register action-open-register">Đăng ký</span></div>
                             <ul>
@@ -489,6 +490,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li><a href="https://routine.vn/maplist/">Danh sách cửa hàng</a></li>
                             </ul>
                         </div>
+                    </div>
+                    <div data-block="minicart" class="minicart-wrapper"><a class="action showcart" href="https://routine.vn/checkout/cart/" data-bind="scope: 'minicart_content'"><span class="text">Giỏ hàng</span> <span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() }, blockLoader: isLoading"><span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span> <span class="counter-label"><!-- ko if: getCartParam('summary_count') --><!-- ko text: getCartParam('summary_count') --><!-- /ko --><!-- ko i18n: 'items' --><!-- /ko --><!-- /ko --></span></span></a>
+                        <div class="block block-minicart" data-role="dropdownDialog" data-mage-init="{&quot;dropdownDialog&quot;:{ &quot;appendTo&quot;:&quot;[data-block=minicart]&quot;, &quot;triggerTarget&quot;:&quot;.showcart&quot;, &quot;timeout&quot;: &quot;2000&quot;, &quot;closeOnMouseLeave&quot;: false, &quot;closeOnEscape&quot;: true, &quot;triggerClass&quot;:&quot;active&quot;, &quot;parentClass&quot;:&quot;active&quot;, &quot;buttons&quot;:[]}}">
+                            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                                <!-- ko template: getTemplate() -->
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link-wishlist"><span class="link wishlist"><span data-bind="scope: 'wishlist'"><!-- ko if: wishlist().counter --><span data-bind="text: wishlist().items.length" class="counter qty"></span>
+                        <!-- /ko -->
+                        </span>
+                        </span>
                     </div>
             </div>
             </div>
