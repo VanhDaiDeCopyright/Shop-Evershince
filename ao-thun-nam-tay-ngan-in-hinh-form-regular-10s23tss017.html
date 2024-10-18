@@ -488,7 +488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </ul>
                         </div>
                     </div>
-                    <div data-block="minicart" class="minicart-wrapper"><a class="action showcart" href="https://routine.vn/checkout/cart/" data-bind="scope: 'minicart_content'"><span class="text">Giỏ hàng</span> <span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() }, blockLoader: isLoading"><span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span> <span class="counter-label"><!-- ko if: getCartParam('summary_count') --><!-- ko text: getCartParam('summary_count') --><!-- /ko --><!-- ko i18n: 'items' --><!-- /ko --><!-- /ko --></span></span></a>
+                    <div data-block="minicart" class="minicart-wrapper">
                         <div class="block block-minicart" data-role="dropdownDialog" data-mage-init="{&quot;dropdownDialog&quot;:{ &quot;appendTo&quot;:&quot;[data-block=minicart]&quot;, &quot;triggerTarget&quot;:&quot;.showcart&quot;, &quot;timeout&quot;: &quot;2000&quot;, &quot;closeOnMouseLeave&quot;: false, &quot;closeOnEscape&quot;: true, &quot;triggerClass&quot;:&quot;active&quot;, &quot;parentClass&quot;:&quot;active&quot;, &quot;buttons&quot;:[]}}">
                             <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
                                 <!-- ko template: getTemplate() -->
